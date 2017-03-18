@@ -529,6 +529,12 @@ weechat.directive('inputBar', function() {
                     return true;
                 }
 
+                // Electron app only: Prevent Ctrl+W from closing the window
+                if (window.is_electron && $event.ctrlKey && !$event.altKey && !$event.shiftKey && code == 87) {
+                    $event.preventDefault();
+                    return true;
+                }
+
                 // Alt key down -> display quick key legend
                 if ($event.type === "keydown" && code === 18 && !$event.ctrlKey && !$event.shiftKey) {
                     $rootScope.showQuickKeys = true;
