@@ -1,3 +1,9 @@
+# My personal branch with some dirty hacks! Use at your own risk!
+
+Clone and run `npm run build-electron-linux` to build an electron app (browser version slightly broken!) that won't close on Ctrl+W *or* Ctrl+Q,
+doesn't have a scroll bar in the input bar when there's only one line and has weechat's Alt+J feature.
+The last one might soon move into the official Glowing Bear, though.
+
 #A web client for WeeChat [![Build Status](https://api.travis-ci.org/glowing-bear/glowing-bear.png)](https://travis-ci.org/glowing-bear/glowing-bear?branch=master)
 
 Glowing Bear is a web frontend for the [WeeChat](https://weechat.org) IRC client and strives to be a modern interface. It relies on WeeChat to do all the heavy lifting and then provides some nice features on top of that, like embedding images, videos, and other content. The best part, however, is that you can use it from any modern internet device -- whether it's a computer, tablet, or smart phone -- and all your stuff is there, wherever you are. You don't have to deal with the messy technical details, and all you need to have installed is a browser or our app.
