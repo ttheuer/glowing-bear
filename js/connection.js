@@ -412,18 +412,18 @@ weechat.factory('connection',
     };
 
     var sendHotlistClear = function() {
-        if (models.version[0] >= 1) {
+        //if (models.version[0] >= 1) {
             // WeeChat >= 1 supports clearing hotlist with this command
-            sendMessage('/buffer set hotlist -1');
+            //sendMessage('/buffer set hotlist -1');
             // Also move read marker
-            sendMessage('/input set_unread_current_buffer');
-        } else {
+            //sendMessage('/input set_unread_current_buffer');
+        //} else {
             // If user wants to sync hotlist with weechat
             // we will send a /buffer bufferName command every time
             // the user switches a buffer. This will ensure that notifications
             // are cleared in the buffer the user switches to
             sendCoreCommand('/buffer ' + models.getActiveBuffer().fullName);
-        }
+        //}
     };
 
     var sendHotlistClearAll = function() {
